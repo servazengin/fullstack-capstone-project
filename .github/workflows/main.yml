@@ -11,7 +11,7 @@ jobs:
     name: Lint JavaScript Files
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v4
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -28,9 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: lint_js
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: Use Node.js
+      - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
